@@ -25,9 +25,15 @@ class _MyAnimatedPositionedState extends State<MyAnimatedPositioned> {
               child: GestureDetector(
                 onTap: (){
                   setState(() {
-
+                      selected = !selected;
                   });
                 },
+                child: Container(
+                  decoration: BoxDecoration(
+                    color: Colors.orangeAccent,
+                    borderRadius: BorderRadius.circular(25)
+                  ),
+                ),
               ),
               duration: Duration(seconds: 2))
         ],
