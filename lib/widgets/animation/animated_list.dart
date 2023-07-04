@@ -8,6 +8,10 @@ class MyAnimatedList extends StatefulWidget {
 }
 
 class _MyAnimatedListState extends State<MyAnimatedList> {
+
+  final items = [];
+  final GlobalKey<AnimatedListState> _key = GlobalKey();
+
   @override
   Widget build(BuildContext context) {
     return const Placeholder();
