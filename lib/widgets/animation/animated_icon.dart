@@ -22,6 +22,12 @@ class _MyAnimatedIconState extends State<MyAnimatedIcon> with TickerProviderStat
   }
 
   @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return const Placeholder();
   }
