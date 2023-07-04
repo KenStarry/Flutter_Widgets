@@ -20,6 +20,9 @@ class _MyAnimatedSwitcherState extends State<MyAnimatedSwitcher> {
           duration: Duration(milliseconds: 500),
           child: Text('$count',
           key: ValueKey(count),),
+          transitionBuilder: (child, animation){
+            return ScaleTransition(scale: animation, child: child,)
+          },
         ),
         ElevatedButton(onPressed: (){
           setState(() {
