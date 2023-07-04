@@ -8,6 +8,19 @@ class MyAnimatedIcon extends StatefulWidget {
 }
 
 class _MyAnimatedIconState extends State<MyAnimatedIcon> with TickerProviderStateMixin{
+
+  bool _isPlay = false;
+  late AnimationController _controller;
+
+  @override
+  void initState() {
+    super.initState();
+
+    _controller = AnimationController(
+      duration: Duration(seconds: 1),
+        vsync: this);
+  }
+
   @override
   Widget build(BuildContext context) {
     return const Placeholder();
