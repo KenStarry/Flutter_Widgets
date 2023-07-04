@@ -13,6 +13,17 @@ class _MyAnimatedListState extends State<MyAnimatedList> {
   final GlobalKey<AnimatedListState> _key = GlobalKey();
 
   @override
+  void initState() {
+    super.initState();
+
+
+  }
+
+  void addItem() {
+    items.insert(0, "Item ${items.length + 1}");
+  }
+
+  @override
   Widget build(BuildContext context) {
     return const Placeholder();
   }
