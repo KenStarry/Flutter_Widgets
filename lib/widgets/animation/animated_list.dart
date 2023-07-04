@@ -24,6 +24,11 @@ class _MyAnimatedListState extends State<MyAnimatedList> {
     _key.currentState!.insertItem(0, duration: Duration(seconds: 1));
   }
 
+  void removeItem({required int index}) {
+    _key.currentState!.removeItem(index, (_, animation) => SizeTransition(sizeFactor: animation, child:
+      Card(),));
+  }
+
   @override
   Widget build(BuildContext context) {
     return const Placeholder();
