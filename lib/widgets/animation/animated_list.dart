@@ -21,6 +21,7 @@ class _MyAnimatedListState extends State<MyAnimatedList> {
 
   void addItem() {
     items.insert(0, "Item ${items.length + 1}");
+    _key.currentState!.insertItem(0, duration: Duration(seconds: 1));
   }
 
   @override
