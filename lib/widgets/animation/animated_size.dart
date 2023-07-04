@@ -8,8 +8,26 @@ class MyAnimatedSize extends StatefulWidget {
 }
 
 class _MyAnimatedSizeState extends State<MyAnimatedSize> {
+  double _size = 300;
+
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return GestureDetector(
+      onTap: () {
+        setState(() {
+          _size = _size == 300 ? 100 : 300;
+        });
+      },
+      child: Container(
+        color: Colors.orangeAccent,
+        child: AnimatedSize(
+          duration: Duration(seconds: 1),
+          curve: Curves.easeIn,
+          child: FlutterLogo(
+            size: _size,
+          ),
+        ),
+      ),
+    );
   }
 }
