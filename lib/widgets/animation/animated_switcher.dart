@@ -18,9 +18,14 @@ class _MyAnimatedSwitcherState extends State<MyAnimatedSwitcher> {
       children: [
         AnimatedSwitcher(
           duration: Duration(milliseconds: 500),
-          child: Text('$count'),
+          child: Text('$count',
+          key: ValueKey(count),),
         ),
-        ElevatedButton(onPressed: (){}, child: Text('Add'))
+        ElevatedButton(onPressed: (){
+          setState(() {
+            count += 1;
+          });
+        }, child: Text('Add'))
       ],
     );
   }

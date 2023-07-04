@@ -18,6 +18,7 @@ import 'package:flutter_map_widgets/widgets/animation/animated_physical_model.da
 import 'package:flutter_map_widgets/widgets/animation/animated_positioned.dart';
 import 'package:flutter_map_widgets/widgets/animation/animated_rotation.dart';
 import 'package:flutter_map_widgets/widgets/animation/animated_size.dart';
+import 'package:flutter_map_widgets/widgets/animation/animated_switcher.dart';
 import 'package:flutter_map_widgets/widgets/app_bar.dart';
 import 'package:flutter_map_widgets/widgets/aspect_ratio.dart';
 import 'package:flutter_map_widgets/widgets/auto_complete.dart';
@@ -38,7 +39,7 @@ import 'package:flutter_map_widgets/widgets/popup_menu.dart';
 import 'package:flutter_map_widgets/widgets/tab_bar.dart';
 
 void main() => runApp(MaterialApp(
-  home: const MyAnimatedSize(),
+  home: const MyAnimatedSwitcher(),
   debugShowCheckedModeBanner: false,
   theme: ThemeData(primarySwatch: Colors.deepOrange),
 ));
