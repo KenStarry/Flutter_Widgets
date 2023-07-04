@@ -8,11 +8,30 @@ class MyAnimatedPositioned extends StatefulWidget {
 }
 
 class _MyAnimatedPositionedState extends State<MyAnimatedPositioned> {
-
   bool selected = false;
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox();
+    return SizedBox(
+      width: 200,
+      height: 200,
+      child: Stack(
+        children: [
+          AnimatedPositioned(
+              width: selected ? 200.0 : 50.0,
+              height: selected ? 50.0 : 200.0,
+              top: selected ? 50.0 : 150.0,
+              curve: Curves.easeIn,
+              child: GestureDetector(
+                onTap: (){
+                  setState(() {
+
+                  });
+                },
+              ),
+              duration: Duration(seconds: 2))
+        ],
+      ),
+    );
   }
 }
