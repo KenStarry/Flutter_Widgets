@@ -8,15 +8,12 @@ class MyAnimatedList extends StatefulWidget {
 }
 
 class _MyAnimatedListState extends State<MyAnimatedList> {
-
   final items = [];
   final GlobalKey<AnimatedListState> _key = GlobalKey();
 
   @override
   void initState() {
     super.initState();
-
-
   }
 
   void addItem() {
@@ -25,8 +22,21 @@ class _MyAnimatedListState extends State<MyAnimatedList> {
   }
 
   void removeItem({required int index}) {
-    _key.currentState!.removeItem(index, (_, animation) => SizeTransition(sizeFactor: animation, child:
-      Card(),));
+    _key.currentState!.removeItem(
+        index,
+        (_, animation) => SizeTransition(
+              sizeFactor: animation,
+              child: Card(
+                margin: EdgeInsets.all(12),
+                color: Colors.redAccent,
+                child: ListTile(
+                  title: Text("Deleted"),
+                ),
+              ),
+            ),
+    duration: Duration(seconds: 3));
+
+    items.removeAt(index);
   }
 
   @override
