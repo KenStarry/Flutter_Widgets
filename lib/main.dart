@@ -12,6 +12,8 @@ import 'package:flutter_map_widgets/widgets/absorb_pointer.dart';
 import 'package:flutter_map_widgets/widgets/alert_dialog.dart';
 import 'package:flutter_map_widgets/widgets/align.dart';
 import 'package:flutter_map_widgets/widgets/animated_container.dart';
+import 'package:flutter_map_widgets/widgets/animation/animated_opacity.dart';
+import 'package:flutter_map_widgets/widgets/animation/animated_padding.dart';
 import 'package:flutter_map_widgets/widgets/app_bar.dart';
 import 'package:flutter_map_widgets/widgets/aspect_ratio.dart';
 import 'package:flutter_map_widgets/widgets/auto_complete.dart';
@@ -32,7 +34,7 @@ import 'package:flutter_map_widgets/widgets/popup_menu.dart';
 import 'package:flutter_map_widgets/widgets/tab_bar.dart';
 
 void main() => runApp(MaterialApp(
-  home: const MyPopupMenu(),
+  home: const MyAnimatedPadding(),
   debugShowCheckedModeBanner: false,
   theme: ThemeData(primarySwatch: Colors.deepOrange),
 ));
