@@ -14,6 +14,7 @@ import 'package:flutter_map_widgets/widgets/align.dart';
 import 'package:flutter_map_widgets/widgets/animated_container.dart';
 import 'package:flutter_map_widgets/widgets/animation/animated_opacity.dart';
 import 'package:flutter_map_widgets/widgets/animation/animated_padding.dart';
+import 'package:flutter_map_widgets/widgets/animation/animated_physical_model.dart';
 import 'package:flutter_map_widgets/widgets/app_bar.dart';
 import 'package:flutter_map_widgets/widgets/aspect_ratio.dart';
 import 'package:flutter_map_widgets/widgets/auto_complete.dart';
@@ -34,7 +35,7 @@ import 'package:flutter_map_widgets/widgets/popup_menu.dart';
 import 'package:flutter_map_widgets/widgets/tab_bar.dart';
 
 void main() => runApp(MaterialApp(
-  home: const MyAnimatedPadding(),
+  home: const MyAnimatedPhysicalModel(),
   debugShowCheckedModeBanner: false,
   theme: ThemeData(primarySwatch: Colors.deepOrange),
 ));
