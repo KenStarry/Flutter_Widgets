@@ -7,8 +7,8 @@ class MyAnimatedIcon extends StatefulWidget {
   State<MyAnimatedIcon> createState() => _MyAnimatedIconState();
 }
 
-class _MyAnimatedIconState extends State<MyAnimatedIcon> with TickerProviderStateMixin{
-
+class _MyAnimatedIconState extends State<MyAnimatedIcon>
+    with TickerProviderStateMixin {
   bool _isPlay = false;
   late AnimationController _controller;
 
@@ -16,9 +16,8 @@ class _MyAnimatedIconState extends State<MyAnimatedIcon> with TickerProviderStat
   void initState() {
     super.initState();
 
-    _controller = AnimationController(
-      duration: Duration(seconds: 1),
-        vsync: this);
+    _controller =
+        AnimationController(duration: Duration(seconds: 1), vsync: this);
   }
 
   @override
@@ -29,6 +28,21 @@ class _MyAnimatedIconState extends State<MyAnimatedIcon> with TickerProviderStat
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return GestureDetector(
+      onTap: () {
+        if (_isPlay == false) {
+          _controller.forward();
+          _isPlay = true;
+        } else {
+          _controller.reverse();
+          _isPlay = false;
+        }
+      },
+      child: AnimatedIcon(
+        icon: AnimatedIcons.play_pause,
+        progress: _controller,
+        size: 100,
+      ),
+    );
   }
 }
