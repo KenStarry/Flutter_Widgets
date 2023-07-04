@@ -23,7 +23,11 @@ class _MyAnimatedOpacityState extends State<MyAnimatedOpacity> {
             size: 50,
           ),
         ),
-        ElevatedButton(onPressed: (){}, child: Text("Fade Logo"))
+        ElevatedButton(onPressed: (){
+          setState(() {
+            opacityLevel = opacityLevel == 0 ? 1.0 : 0;
+          });
+        }, child: const Text("Fade Logo"))
       ],
     );
   }
