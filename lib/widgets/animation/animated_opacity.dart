@@ -8,7 +8,6 @@ class MyAnimatedOpacity extends StatefulWidget {
 }
 
 class _MyAnimatedOpacityState extends State<MyAnimatedOpacity> {
-
   double opacityLevel = 1.0;
 
   @override
@@ -17,7 +16,14 @@ class _MyAnimatedOpacityState extends State<MyAnimatedOpacity> {
       mainAxisAlignment: MainAxisAlignment.center,
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-        AnimatedOpacity(opacity: opacityLevel, duration: Duration(seconds: 2))
+        AnimatedOpacity(
+          opacity: opacityLevel,
+          duration: const Duration(seconds: 2),
+          child: const FlutterLogo(
+            size: 50,
+          ),
+        ),
+        ElevatedButton(onPressed: (){}, child: Text("Fade Logo"))
       ],
     );
   }
