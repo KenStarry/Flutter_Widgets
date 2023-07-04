@@ -34,13 +34,30 @@ class _MyAnimatedListState extends State<MyAnimatedList> {
                 ),
               ),
             ),
-    duration: Duration(seconds: 3));
+        duration: Duration(seconds: 3));
 
     items.removeAt(index);
   }
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Column(
+      children: [
+        IconButton(onPressed: () => addItem(), icon: Icon(Icons.add)),
+        Expanded(
+            child: AnimatedList(
+          key: _key,
+          initialItemCount: 0,
+          padding: const EdgeInsets.all(16),
+          itemBuilder: (context, builder, animation) => SizeTransition(
+            sizeFactor: animation,
+            key: UniqueKey(),
+            child: Card(
+              color: Colors.redAccent ,
+            ),
+          ),
+        ))
+      ],
+    );
   }
 }
