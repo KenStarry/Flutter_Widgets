@@ -22,6 +22,8 @@ class MyDataTable extends StatelessWidget {
         'Color',
         style: titles,
       )),
-    ], rows: []);
+    ], rows: [
+      DataRow(cells: [])
+    ]);
   }
 }
