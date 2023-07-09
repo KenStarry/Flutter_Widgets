@@ -22,7 +22,16 @@ class _MyDraggableState extends State<MyDraggable> {
               onAccept: (Color col) {
                 caughtColor = col;
               },
-              builder: (context, accepted, rejected) {})
+              builder: (context, accepted, rejected) {
+                return Container(
+                  width: 200,
+                  height: 200,
+                  color: accepted.isEmpty ? caughtColor : Colors.grey.shade200,
+                  child: Center(
+                    child: Text("Drag here"),
+                  ),
+                );
+              })
         ],
       ),
     );
