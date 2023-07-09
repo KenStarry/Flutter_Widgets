@@ -23,7 +23,11 @@ class _MyDecoratedBoxTransitionState extends State<MyDecoratedBoxTransition> wit
         )
       ]
     ),
-    end: BoxDecoration()
+    end: BoxDecoration(
+        color: Colors.white,
+        border: Border.all(style: BorderStyle.none),
+        borderRadius: BorderRadius.zero
+    )
   );
 
   @override
