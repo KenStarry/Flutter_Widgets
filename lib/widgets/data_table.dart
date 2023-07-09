@@ -23,7 +23,21 @@ class MyDataTable extends StatelessWidget {
         style: titles,
       )),
     ], rows: [
-      DataRow(cells: [])
+      DataRow(cells: [
+        DataCell(Text('Pookie')),
+        DataCell(Text('21')),
+        DataCell(Text('Pink')),
+      ]),
+      DataRow(cells: [
+        DataCell(Text('Starry')),
+        DataCell(Text('22')),
+        DataCell(Text('Blue')),
+      ]),
+      DataRow(cells: [
+        DataCell(Text('Booboo')),
+        DataCell(Text('22')),
+        DataCell(Text('Red')),
+      ]),
     ]);
   }
 }
