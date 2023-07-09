@@ -18,20 +18,37 @@ class _MyDraggableState extends State<MyDraggable> {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          DragTarget(
-              onAccept: (Color col) {
-                caughtColor = col;
-              },
-              builder: (context, accepted, rejected) {
-                return Container(
-                  width: 200,
-                  height: 200,
-                  color: accepted.isEmpty ? caughtColor : Colors.grey.shade200,
-                  child: Center(
-                    child: Text("Drag here"),
-                  ),
-                );
-              })
+          Draggable(
+              data: Colors.red,
+              child: Container(
+                width: 200,
+                height: 200,
+                color: Colors.red,
+                child: Center(
+                  child: Text("Box"),
+                ),
+              ),
+              feedback: Container(
+                width: 150,
+                height: 150,
+                color: Colors.red.withOpacity(0.3),
+                child: Center(
+                  child: Text("Box....."),
+                ),
+              ),
+          onDraggableCanceled: (velocity, offset){}),
+          DragTarget(onAccept: (Color col) {
+            caughtColor = col;
+          }, builder: (context, accepted, rejected) {
+            return Container(
+              width: 200,
+              height: 200,
+              color: accepted.isEmpty ? caughtColor : Colors.grey.shade200,
+              child: Center(
+                child: Text("Drag here"),
+              ),
+            );
+          })
         ],
       ),
     );
