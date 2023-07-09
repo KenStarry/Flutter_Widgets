@@ -41,6 +41,7 @@ import 'package:flutter_map_widgets/widgets/tab_bar.dart';
 
 void main() => runApp(MaterialApp(
   home: const MyBaseline(),
+  showSemanticsDebugger: true,
   debugShowCheckedModeBanner: false,
   theme: ThemeData(primarySwatch: Colors.deepOrange),
 ));
