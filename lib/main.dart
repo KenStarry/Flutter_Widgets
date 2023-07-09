@@ -33,6 +33,7 @@ import 'package:flutter_map_widgets/widgets/bottom_navigation/navigate_calls.dar
 import 'package:flutter_map_widgets/widgets/chip.dart';
 import 'package:flutter_map_widgets/widgets/choice_chip.dart';
 import 'package:flutter_map_widgets/widgets/clip_path.dart';
+import 'package:flutter_map_widgets/widgets/close_button.dart';
 import 'package:flutter_map_widgets/widgets/date_picker.dart';
 import 'package:flutter_map_widgets/widgets/drawer/hidden_drawer.dart';
 import 'package:flutter_map_widgets/widgets/dropdown_button_form.dart';
@@ -44,7 +45,7 @@ import 'package:flutter_map_widgets/widgets/popup_menu.dart';
 import 'package:flutter_map_widgets/widgets/tab_bar.dart';
 
 void main() => runApp(MaterialApp(
-  home: MyClipPath(),
+  home: const MyCloseButton(),
   showSemanticsDebugger: false,
   debugShowCheckedModeBanner: false,
   theme: ThemeData(primarySwatch: Colors.deepOrange),
