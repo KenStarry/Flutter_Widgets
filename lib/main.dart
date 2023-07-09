@@ -31,6 +31,7 @@ import 'package:flutter_map_widgets/widgets/bottom_navbar_custom1.dart';
 import 'package:flutter_map_widgets/widgets/bottom_navigation/curved_bottom_navbar.dart';
 import 'package:flutter_map_widgets/widgets/bottom_navigation/navigate_calls.dart';
 import 'package:flutter_map_widgets/widgets/chip.dart';
+import 'package:flutter_map_widgets/widgets/choice_chip.dart';
 import 'package:flutter_map_widgets/widgets/date_picker.dart';
 import 'package:flutter_map_widgets/widgets/drawer/hidden_drawer.dart';
 import 'package:flutter_map_widgets/widgets/dropdown_button_form.dart';
@@ -42,7 +43,7 @@ import 'package:flutter_map_widgets/widgets/popup_menu.dart';
 import 'package:flutter_map_widgets/widgets/tab_bar.dart';
 
 void main() => runApp(MaterialApp(
-  home: const SafeArea(child: MyChip()),
+  home: const SafeArea(child: MyChoiceChip()),
   showSemanticsDebugger: true,
   debugShowCheckedModeBanner: false,
   theme: ThemeData(primarySwatch: Colors.deepOrange),
