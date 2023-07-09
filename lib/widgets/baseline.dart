@@ -5,6 +5,17 @@ class MyBaseline extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Container(
+      width: 200,
+      height: 200,
+      color: Colors.red,
+      child: Baseline(
+        baseline: 0,
+        baselineType: TextBaseline.alphabetic,
+        child: FlutterLogo(
+          size: 50,
+        ),
+      ),
+    );
   }
 }
