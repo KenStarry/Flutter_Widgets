@@ -5,6 +5,21 @@ class MyClipRect extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Center(
+      child: Container(
+        width: 3000,
+        height: 3000,
+        color: Colors.orangeAccent,
+      ),
+    );
   }
+}
+
+class RectClipper extends CustomClipper<Rect> {
+  @override
+  Rect getClip(Size size) => const Rect.fromLTWH(0, 0, 80, 80);
+
+  @override
+  bool shouldReclip(covariant CustomClipper<Rect> oldClipper) => false;
+  
 }
