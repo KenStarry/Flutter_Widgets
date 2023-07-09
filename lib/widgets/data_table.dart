@@ -5,6 +5,23 @@ class MyDataTable extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    TextStyle titles = const TextStyle(fontWeight: FontWeight.bold);
+    return DataTable(columns: [
+      DataColumn(
+          label: Text(
+        'Name',
+        style: titles,
+      )),
+      DataColumn(
+          label: Text(
+        'Age',
+        style: titles,
+      )),
+      DataColumn(
+          label: Text(
+        'Color',
+        style: titles,
+      )),
+    ], rows: []);
   }
 }
