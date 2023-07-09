@@ -8,8 +8,23 @@ class MyDraggable extends StatefulWidget {
 }
 
 class _MyDraggableState extends State<MyDraggable> {
+  Color caughtColor = Colors.red;
+
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return SizedBox(
+      width: double.infinity,
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          DragTarget(
+              onAccept: (Color col) {
+                caughtColor = col;
+              },
+              builder: (context, accepted, rejected) {})
+        ],
+      ),
+    );
   }
 }
