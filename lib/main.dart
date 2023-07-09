@@ -36,6 +36,7 @@ import 'package:flutter_map_widgets/widgets/clip_path.dart';
 import 'package:flutter_map_widgets/widgets/close_button.dart';
 import 'package:flutter_map_widgets/widgets/color_filtered.dart';
 import 'package:flutter_map_widgets/widgets/container.dart';
+import 'package:flutter_map_widgets/widgets/custom_paint.dart';
 import 'package:flutter_map_widgets/widgets/date_picker.dart';
 import 'package:flutter_map_widgets/widgets/drawer/hidden_drawer.dart';
 import 'package:flutter_map_widgets/widgets/dropdown_button_form.dart';
@@ -49,7 +50,7 @@ import 'package:flutter_map_widgets/widgets/tab_bar.dart';
 void main() => runApp(MaterialApp(
       home: Scaffold(
           backgroundColor: Colors.white,
-          body: SafeArea(child: const MyContainer())),
+          body: SafeArea(child: const MyCustomPaint())),
       showSemanticsDebugger: false,
       debugShowCheckedModeBanner: false,
       theme: ThemeData(primarySwatch: Colors.deepOrange),
