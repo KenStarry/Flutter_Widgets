@@ -25,6 +25,7 @@ import 'package:flutter_map_widgets/widgets/auto_complete.dart';
 import 'package:flutter_map_widgets/widgets/backdrop_filter.dart';
 import 'package:flutter_map_widgets/widgets/banner.dart';
 import 'package:flutter_map_widgets/widgets/baseline.dart';
+import 'package:flutter_map_widgets/widgets/block_semantics.dart';
 import 'package:flutter_map_widgets/widgets/bottom_navbar.dart';
 import 'package:flutter_map_widgets/widgets/bottom_navbar_custom1.dart';
 import 'package:flutter_map_widgets/widgets/bottom_navigation/curved_bottom_navbar.dart';
@@ -40,7 +41,7 @@ import 'package:flutter_map_widgets/widgets/popup_menu.dart';
 import 'package:flutter_map_widgets/widgets/tab_bar.dart';
 
 void main() => runApp(MaterialApp(
-  home: const MyBaseline(),
+  home: const MyBlockSemantics(),
   showSemanticsDebugger: true,
   debugShowCheckedModeBanner: false,
   theme: ThemeData(primarySwatch: Colors.deepOrange),
