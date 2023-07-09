@@ -39,6 +39,7 @@ import 'package:flutter_map_widgets/widgets/container.dart';
 import 'package:flutter_map_widgets/widgets/custom_paint.dart';
 import 'package:flutter_map_widgets/widgets/data_table.dart';
 import 'package:flutter_map_widgets/widgets/date_picker.dart';
+import 'package:flutter_map_widgets/widgets/decorated_box_transition.dart';
 import 'package:flutter_map_widgets/widgets/drawer/hidden_drawer.dart';
 import 'package:flutter_map_widgets/widgets/dropdown_button_form.dart';
 import 'package:flutter_map_widgets/widgets/dropdown_menu.dart';
@@ -51,7 +52,7 @@ import 'package:flutter_map_widgets/widgets/tab_bar.dart';
 void main() => runApp(MaterialApp(
       home: Scaffold(
           backgroundColor: Colors.white,
-          body: SafeArea(child: const MyDataTable())),
+          body: SafeArea(child: const MyDecoratedBoxTransition())),
       showSemanticsDebugger: false,
       debugShowCheckedModeBanner: false,
       theme: ThemeData(primarySwatch: Colors.deepOrange),

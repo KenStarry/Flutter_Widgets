@@ -39,6 +39,16 @@ class _MyDecoratedBoxTransitionState extends State<MyDecoratedBoxTransition>
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Center(
+      child: DecoratedBoxTransition(
+          decoration: decorationTween.animate(_controller),
+          child: Container(
+            width: 250,
+            height: 250,
+            child: FlutterLogo(
+              size: 100,
+            ),
+          )),
+    );
   }
 }
