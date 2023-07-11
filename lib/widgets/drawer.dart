@@ -6,6 +6,13 @@ class MyDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      body: Center(
+        child: Builder(
+            builder: (context) =>
+                ElevatedButton(onPressed: () {
+                  Scaffold.of(context).openDrawer();
+                }, child: Text("Open Drawer"))),
+      ),
       drawer: Drawer(
         child: ListView.builder(
           itemBuilder: (context, index) => ListTile(
