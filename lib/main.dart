@@ -52,6 +52,17 @@ import 'package:flutter_map_widgets/widgets/popup_menu.dart';
 import 'package:flutter_map_widgets/widgets/tab_bar.dart';
 
 void main() {
+
+  try {
+    print("Throw an error");
+  } catch (error) {
+    FlutterError.reportError(
+      FlutterErrorDetails(exception: error,
+      library: 'Custom Message 1',
+      context: ErrorSummary('CUSTOM MESSAGE TWO'))
+    );
+  }
+
   ErrorWidget.builder = (errorDetails){
     //  if in debug mode, show normal error
     bool inDebug = false;
