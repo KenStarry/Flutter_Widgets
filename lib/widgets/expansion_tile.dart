@@ -8,8 +8,25 @@ class MyExpansionTile extends StatefulWidget {
 }
 
 class _MyExpansionTileState extends State<MyExpansionTile> {
+  bool _customIcon = false;
+
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Column(
+      children: [
+        ExpansionTile(
+          title: Text("Expansion Tile"),
+          trailing:
+              Icon(_customIcon ? Icons.arrow_drop_up : Icons.arrow_drop_down),
+          children: [Text("Hello There")],
+          onExpansionChanged: (expanded) {
+            setState(() {
+              _customIcon = expanded;
+            });
+          },
+          controlAffinity: ListTileControlAffinity.leading,
+        )
+      ],
+    );
   }
 }
