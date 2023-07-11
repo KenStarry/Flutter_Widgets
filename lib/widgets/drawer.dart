@@ -14,11 +14,16 @@ class MyDrawer extends StatelessWidget {
                 }, child: Text("Open Drawer"))),
       ),
       drawer: Drawer(
-        child: ListView.builder(
-          itemBuilder: (context, index) => ListTile(
-            title: Text("Item $index"),
-          ),
-          itemCount: 10,
+        child: Column(
+          children: [
+            DrawerHeader(child: Text('Drawer header')),
+            ListView.builder(
+              itemBuilder: (context, index) => ListTile(
+                title: Text("Item $index"),
+              ),
+              itemCount: 10,
+            ),
+          ],
         ),
       ),
       endDrawer: Drawer(
