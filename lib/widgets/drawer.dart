@@ -5,6 +5,15 @@ class MyDrawer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(
+      drawer: Drawer(
+        child: ListView.builder(
+          itemBuilder: (context, index) => ListTile(
+            title: Text("Item $index"),
+          ),
+          itemCount: 10,
+        ),
+      ),
+    );
   }
 }
