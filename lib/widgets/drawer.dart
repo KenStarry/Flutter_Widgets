@@ -21,6 +21,14 @@ class MyDrawer extends StatelessWidget {
           itemCount: 10,
         ),
       ),
+      endDrawer: Drawer(
+        child: ListView.builder(
+          itemBuilder: (context, index) => ListTile(
+            title: Text("Item $index"),
+          ),
+          itemCount: 10,
+        ),
+      ),
     );
   }
 }
