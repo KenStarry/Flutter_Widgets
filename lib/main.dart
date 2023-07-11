@@ -51,7 +51,27 @@ import 'package:flutter_map_widgets/widgets/percent_indicator.dart';
 import 'package:flutter_map_widgets/widgets/popup_menu.dart';
 import 'package:flutter_map_widgets/widgets/tab_bar.dart';
 
-void main() => runApp(MaterialApp(
+void main() {
+  ErrorWidget.builder = (errorDetails){
+    //  if in debug mode, show normal error
+    bool inDebug = false;
+
+    assert((){
+      inDebug = true;
+      return true;
+    }());
+
+    if (inDebug) {
+      return ErrorWidget(errorDetails.exception);
+    }
+
+    //  in development
+    return Container(
+      alignment: Alignment.center,
+      child: Text("Error message"),
+    );
+  }
+  runApp(MaterialApp(
       home: Scaffold(
           backgroundColor: Colors.white,
           body: SafeArea(child: const MyDrawer())),
@@ -59,3 +79,4 @@ void main() => runApp(MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(primarySwatch: Colors.deepOrange),
     ));
+}
